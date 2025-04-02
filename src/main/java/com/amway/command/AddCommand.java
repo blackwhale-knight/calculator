@@ -5,7 +5,6 @@ import com.amway.BasicCalculator;
 public class AddCommand implements Command {
     private BasicCalculator basicCalculator;
     private double value;
-    private double previousValue;
 
     public AddCommand(BasicCalculator basicCalculator, double value) {
         this.basicCalculator = basicCalculator;
@@ -14,7 +13,6 @@ public class AddCommand implements Command {
 
     @Override
     public void execute() {
-        previousValue = basicCalculator.getCurrentValue();
         basicCalculator.add(value);
     }
 

@@ -5,7 +5,6 @@ import com.amway.BasicCalculator;
 public class DivideCommand implements Command {
     private BasicCalculator basicCalculator;
     private double value;
-    private double previousValue;
 
     public DivideCommand(BasicCalculator basicCalculator, double value) {
         this.basicCalculator = basicCalculator;
@@ -14,7 +13,6 @@ public class DivideCommand implements Command {
 
     @Override
     public void execute() {
-        previousValue = basicCalculator.getCurrentValue();
         if (value != 0) {
             basicCalculator.divide(value);
         } else {
